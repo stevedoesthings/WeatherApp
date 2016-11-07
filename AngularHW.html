@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <title>AngularHW - Meaningful, Personalized App for Getting attention</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="AngularHW - Meaningful, Personalized App for Getting attention">
+  <meta property="og:description" content="An angularjs weather app as homework">
+
+  <!-- Dependencies - Styles -->
+
+  <link rel="stylesheet" href="css/materialize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Weather Card Start -->
+    
+  <div ng-app="myApp" ng-controller="myCtrl">
+  <div class="row">
+    <div class="col l8 offset-l2 m10 offset-m1 s12">
+
+      <div class="card hoverable">
+        <div class="row blue lighten-5">
+          <div class="card-action blue accent-1" style="height: 80px">
+            <h4 class="white-text left">WEATHER</h4>
+            <a href="http://www.stevedoesthings.com">
+            <h4 class="white-text right">About Me</h4></a>
+          </div>
+        </div>
+		  
+		  <div ng-view></div>
+
+        <!-- Bottom Bar Card Start -->
+
+        <div class="card-action blue accent-1" style="height: 70px">
+          <div class="fixed-action-btn horizontal" style="position: absolute; display: inline-block; right: 24px; margin-bottom: 20px;">
+            <button class="btn-floating btn-large waves-effect waves-light red right hoverable">Deg</button>
+            <ul>
+              <li class="btn-floating btn-medium waves-effect waves-light blue darken-1 hoverable"><a href="#/" class="white-text">f</a></li>
+              <li class="btn-floating btn-medium waves-effect waves-light blue darken-2 hoverable"><a href="#celsius" class="white-text">c</a></li>
+              <li class="btn-floating btn-medium waves-effect waves-light blue darken-3 hoverable"><a href="#kelvin" class="white-text">k</a></li>
+              <li class="btn-floating btn-medium waves-effect waves-light blue darken-4 hoverable"><a href="#rankine" class="white-text">r</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  <!-- Dependencies - Libraries -->
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/weatherapp.js"></script>
+  
+</body>
+</html>

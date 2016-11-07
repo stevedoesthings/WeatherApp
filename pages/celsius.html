@@ -1,0 +1,31 @@
+          <div class="card-content blue lighten-5">
+		  <div class='row'>
+            <div class='col l5 m6 s12'>
+              <h4 class='col l6 red-text left'>Cities</h4>
+              <div class='clearfix hoverable'>
+                <ul class='collapsible' data-collapsible='accordion'>
+                  <div class='bordered collapsible-header blue accent-1 waves-effect waves-light' ng-repeat='cities in cities'>
+                      <li class='white-text' ng-click='getTheWeatherClicked(cities.city);'>
+                        <span idclass='col left' ng-bind='cities.city'></span>
+                        <span class='col right'>{{cities.currTempC}}*C</span>
+                      </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class='col l7 m6 s12'>
+              <h4 class='red-text left' ng-bind='currCity.cityName'></h4>
+              <div class='clearfix hoverable'>
+                <ul class='collapsible white' data-collapsible='accordion' style='height: 225px'>
+                  <div  class='bordered collapsible-header' ng-repeat='forecast in forecasts'>
+                    <li>
+                      <span class='col left'>{{forecast.dayStry}}</span>
+                      <span class='col right'>{{forecast.minCtemp}}*C / {{forecast.maxCtemp}}*C</span>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+		  
+        </div>
